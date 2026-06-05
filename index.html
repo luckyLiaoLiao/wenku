@@ -210,17 +210,17 @@ function SearchTab({ onGoToAI }) {
       {!results ? (
         <>
           {/* ── Hero band ── */}
-          <div style={{ background: C.navy, paddingTop: 96, paddingBottom: 96 }}>
+          <div style={{ background: "linear-gradient(180deg, #ecfdf5 0%, #d1fae5 20%, #f0fdf4 60%, #ffffff 100%)", paddingTop: 96, paddingBottom: 96 }}>
             <div style={{ maxWidth: 640, margin: "0 auto", padding: "0 24px", textAlign: "center" }}>
-              <h1 style={{ fontSize: 48, fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.5px", color: C.onDark, marginBottom: 12 }}>
+              <h1 style={{ fontSize: 48, fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.5px", color: C.ink, marginBottom: 12 }}>
                 搜索海量专业文档
               </h1>
-              <p style={{ fontSize: 18, color: C.onDarkMuted, lineHeight: 1.5, marginBottom: 40 }}>
+              <p style={{ fontSize: 18, color: C.slate, lineHeight: 1.5, marginBottom: 40 }}>
                 报告、合同、方案、论文，一站找齐
               </p>
 
               {/* Search input */}
-              <div style={{ background: C.surface, border: `1px solid ${C.hairline}`, borderRadius: 8, height: 52, display: "flex", alignItems: "center", padding: "0 8px 0 14px" }}>
+              <div style={{ background: C.canvas, border: `1px solid ${C.hairlineStrong}`, borderRadius: 8, height: 52, display: "flex", alignItems: "center", padding: "0 8px 0 14px", boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
                 <span style={{ color: C.steel, fontSize: 18, flexShrink: 0 }}>🔍</span>
                 <input
                   style={{ flex: 1, background: "transparent", color: C.ink, fontSize: 16, border: "none", padding: "0 12px" }}
@@ -241,7 +241,7 @@ function SearchTab({ onGoToAI }) {
                 <span style={{ fontSize: 13, color: C.stone }}>热门：</span>
                 {HOT_SEARCHES.map(tag => (
                   <button key={tag} onClick={() => handleHotClick(tag)}
-                    style={{ border: `1px solid rgba(164,160,151,0.4)`, color: C.onDarkMuted, borderRadius: 9999, fontSize: 13, padding: "4px 14px", background: "transparent", cursor: "pointer" }}>
+                    style={{ border: `1px solid ${C.hairlineStrong}`, color: C.slate, borderRadius: 9999, fontSize: 13, padding: "4px 14px", background: "transparent", cursor: "pointer" }}>
                     {tag}
                   </button>
                 ))}
